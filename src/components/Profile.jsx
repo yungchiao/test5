@@ -1,16 +1,26 @@
-import React from "react";
+import { useSelector } from "react-redux";
 import Login from "./Login";
 import NotLogin from "./NotLogin";
-import { useSelector } from "react-redux";
+import styled from "styled-components";
+const Headline = styled.h1`
+  margin-top: 30px;
+  text-align: center;
+`;
+
+const LoginContainer = styled.div`
+  width: 500px;
+  margin: 30vh auto;
+  border: 1px solid #ccc;
+`;
 
 function Profile() {
-  const state = useSelector((state) => state.user);
-  console.log(state);
+  const state = useSelector((state) => state.userReducer.profile);
+
   return (
-    <div>
-      <h1>Profile Info</h1>
-      {state.profile.login ? <Login /> : <NotLogin />}
-    </div>
+    <LoginContainer>
+      <Headline>Profile Info</Headline>
+      {state.login ? <Login /> : <NotLogin />}
+    </LoginContainer>
   );
 }
 
