@@ -14,12 +14,15 @@ const LoginContainer = styled.div`
 `;
 
 function Profile() {
-  const state = useSelector((state) => state.userReducer.profile);
+  // const state = useSelector((state) => state.userReducer.profile);
 
   return (
     <LoginContainer>
       <Headline>Profile Info</Headline>
-      {state.login ? <Login /> : <NotLogin />}
+      <Login />
+      <hr />
+      <NotLogin />
+      {/* {state.login ? <Login /> : <NotLogin />} */}
     </LoginContainer>
   );
 }

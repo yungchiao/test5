@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
-import { userLogin } from "../redux/Action";
+// import { useDispatch } from "react-redux";
+// import { userLogin } from "../redux/Action";
 import styled from "styled-components";
 
 const Input = styled.input`
@@ -39,15 +39,15 @@ const ButtonContainer = styled.div`
   margin: 30px auto;
 `;
 function NotLogin() {
-  const dispatch = useDispatch();
-  const nameRef = useRef();
-  const ageRef = useRef();
-  const emailRef = useRef();
+  // const dispatch = useDispatch();
+  // const nameRef = useRef();
+  // const ageRef = useRef();
+  // const emailRef = useRef();
   const handleLogin = () => {
-    const nameValue = nameRef.current.value;
-    const ageValue = ageRef.current.value;
-    const emailValue = emailRef.current.value;
-    dispatch(userLogin({ name: nameValue, age: ageValue, email: emailValue }));
+    // const nameValue = nameRef.current.value;
+    // const ageValue = ageRef.current.value;
+    // const emailValue = emailRef.current.value;
+    // dispatch(userLogin({ name: nameValue, age: ageValue, email: emailValue }));
   };
   return (
     <div>
@@ -60,14 +60,20 @@ function NotLogin() {
           placeholder="name"
           name="name"
           id="name"
-          ref={nameRef}
+          // ref={nameRef}
         />
       </InputContainer>
       <InputContainer>
         <label htmlFor="age">
           <Title>年齡</Title>
         </label>
-        <Input type="text" placeholder="age" name="age" id="age" ref={ageRef} />
+        <Input
+          type="text"
+          placeholder="age"
+          name="age"
+          id="age"
+          // ref={ageRef}
+        />
       </InputContainer>
       <InputContainer>
         <label htmlFor="email">
@@ -78,7 +84,7 @@ function NotLogin() {
           placeholder="email"
           name="email"
           id="email"
-          ref={emailRef}
+          // ref={emailRef}
         />
       </InputContainer>
       <ButtonContainer>

@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { userLogout } from "../redux/Action";
+// import { useDispatch, useSelector } from "react-redux";
+// import { userLogout } from "../redux/Action";
 import styled from "styled-components";
 
 const Title = styled.p`
@@ -36,22 +36,22 @@ const Line = styled.div`
   margin: 20px auto;
 `;
 function Login() {
-  const state = useSelector((state) => state.userReducer.profile);
-  const dispatch = useDispatch();
+  // const state = useSelector((state) => state.userReducer.profile);
+  // const dispatch = useDispatch();
   const handleLogout = () => {
-    dispatch(userLogout());
+    // dispatch(userLogout());
   };
 
   return (
     <div>
       <InputContainer>
-        <Title>姓名 : {state.name}</Title>
+        <Title>姓名 :{/* {state.name} */}</Title>
       </InputContainer>
       <InputContainer>
-        <Title>年齡 : {state.age}</Title>
+        <Title>年齡 :{/* {state.age} */}</Title>
       </InputContainer>
       <InputContainer>
-        <Title>信箱 : {state.email}</Title>
+        <Title>信箱 :{/* {state.email} */}</Title>
       </InputContainer>
       <Line />
       <ButtonContainer>
